@@ -10,6 +10,7 @@ export default function TopText() {
     useGSAP(() => {
         gsap.fromTo(".char", { y: 135 }, { y: 0, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0 100%)', duration: .35, delay: .10, stagger: .04 })
         gsap.to(".topTextImg", { rotation: 360, repeat: -1, duration: 13, ease: "linear" })
+        gsap.fromTo(".topTextRightImg", {}, {clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0 100%)', duration: .7, delay: .10 })
     })
     
     return (
@@ -62,7 +63,7 @@ export default function TopText() {
                         <span className='char'>R</span> 
                     </div>
                 </Text>
-                <BackgroundImage src={BackgroundAbstract}></BackgroundImage>
+                <BackgroundImage className='topTextRightImg' src={BackgroundAbstract}></BackgroundImage>
             </Container>
         </>
     );
@@ -118,4 +119,5 @@ const Text = styled.span`
 
 const BackgroundImage = styled.img`
     width: 60vw;
+    clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
 `
