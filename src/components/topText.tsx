@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import FlowerImage from '../svg/flower.svg'
 import CircleImage from '../svg/circle_.svg'
-import BackgroundAbstract from '../background/abstract.webp'
+import BackgroundAbstract from '../images/background/abstract.webp'
 import Circle2Image from '../svg/circle2.svg'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
