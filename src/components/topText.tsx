@@ -117,6 +117,10 @@ const Text = styled.span`
     }
 `
 
+const Quote = styled.span`
+
+`
+
 const BackgroundImage = styled.img`
     width: 60vw;
     clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);

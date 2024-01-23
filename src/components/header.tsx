@@ -1,13 +1,21 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import useInterval from 'use-interval';
-import FiroIcon from '../svg/icon.png'
+import FiroIcon from '../svg/icon.png';
+
+function getKorTime() {
+    const curr = new Date();
+    const utc = curr.getTime() + (curr.getTimezoneOffset() * 60 * 1000);
+    const KR_TIME_DIFF = 9 * 60 * 60 * 1000;
+    const kr_curr = new Date(utc + (KR_TIME_DIFF));
+    return kr_curr
+}
 
 export default function Header() {
-    const [timeData, setTimeData] = useState(new Date());
+    const [timeData, setTimeData] = useState(getKorTime());
 
     useInterval(()=>{
-        setTimeData(new Date())
+        setTimeData(getKorTime())
     },1000);
 
     return (
@@ -24,7 +32,7 @@ export default function Header() {
                     <img src={FiroIcon} height={25} />
                     <div style={{ width: '240px', display: 'flex', flexDirection: 'row-reverse' }}>
                         <TimeContainer>
-                            {timeData.getHours()}:{timeData.getMinutes() > 9 ? timeData.getMinutes() : '0' + timeData.getMinutes()} {timeData.getHours() > 12 ? 'PM' : 'AM'}
+                            Republic of Korea,&nbsp;<b>{timeData.getHours()}:{timeData.getMinutes() > 9 ? timeData.getMinutes() : '0' + timeData.getMinutes()}</b>&nbsp;{timeData.getHours() > 12 ? 'PM' : 'AM'}
                         </TimeContainer>
                     </div>
             </HeaderContainer>
@@ -87,19 +95,19 @@ const MenuItem = styled.div<{ active: string }>`
 `
 
 const TimeContainer = styled.div`
-    width: 90px;
-    height: 30px;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
-    border-radius: 100px;
-
     font-size: 16px;
-    letter-spacing: .75px;
+    font-weight: 500;
+    letter-spacing: -.1px;
 
-    border: 1.5px solid var(--color-primary);
-    color: #000;
+    color: #808080;
+
+    b {
+        color: var(--color-primary);
+        font-weight: 500;
+    }
 `

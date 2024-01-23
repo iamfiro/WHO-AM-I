@@ -1,6 +1,7 @@
 :root {
     --color-primary: #1A1A1B;
     --color-orange: #FF4800;
+    --color-blue: #3B78EB;
     --color-secondary: #D7D7D7;
     --color-secondary-transparent: #d7d7d71d;
 
@@ -8,6 +9,12 @@
 }
 
 @import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css");
+
+::selection {
+    background: var(--color-primary);
+    color: #fff;
+    mix-blend-mode: difference;
+}
 
 body {
     margin: 0;

@@ -5,13 +5,12 @@ import SplitType from 'split-type';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import KoreaImg from '../images/korea.png';
 import PatternImg from '../images/pattenImage.jpg';
+import { IoMdArrowUp } from "react-icons/io";
 
 export default function Description() {
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger)
         const splitTypes = document.querySelectorAll('.descriptionTitle');
-
-        const ImgElement = document.getElementById('descriptionImage1');
 
         splitTypes.forEach((el) => {
             const text = new SplitType(el as HTMLElement, { types: 'chars,words' });
@@ -30,9 +29,6 @@ export default function Description() {
             })
         });
 
-        const imgOffetTop = ImgElement?.offsetTop ?? 0;
-        const imgOffetHeight = ImgElement?.offsetHeight ?? 0;
-        console.log(imgOffetTop, imgOffetHeight)
 
         gsap.to(".descriptionImage1", {
             scrollTrigger: {
@@ -61,7 +57,8 @@ export default function Description() {
             duration: 0.5,
             clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0 100%)',
         })
-    })
+    });
+
     return (
         <>
             <Container>
@@ -78,7 +75,13 @@ export default function Description() {
                     </Text>
                     <ImageContainer>
                         <img className='descriptionImage1' src={PatternImg} />
-                        <img className='descriptionImage2' src={KoreaImg} />
+                        <KoreaImageContainer>
+                            <img className='descriptionImage2' style={{ width: '100%' }} src={KoreaImg} />
+                            <GoogleMapRedirectContainer className='googleMapRedirect' id='googleMapRedirect' href='https://www.google.com/maps/place/%ED%95%9C%EA%B5%AD/' target='_blank'>
+                                <span>WHERE IS THE <b>SOUTH KOREA</b></span>
+                                <IoMdArrowUp />
+                            </GoogleMapRedirectContainer>
+                        </KoreaImageContainer>
                     </ImageContainer>
                 </RightContainer>
             </Container>
@@ -94,7 +97,7 @@ const Container = styled.section`
     justify-content: space-between;
     align-items: flex-start;
 
-    margin: 50px 40px;
+    margin: 50px 40px 100px 40px;
 `
 
 const TitleContainer = styled.div`
@@ -113,7 +116,7 @@ const Divider = styled.div`
     width: 2.3px;
     height: 14px;
 
-    background-color: #3B78EB;
+    background-color: var(--color-blue);
 
     margin: 0px 0.625rem 0px 0px;
 
@@ -151,7 +154,41 @@ const ImageContainer = styled.div`
         clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
     }
 
-    img:nth-child(1) {
+    .descriptionImage1 {
         height: 45vw;
+    }
+`
+
+const KoreaImageContainer = styled.div`
+    width: calc(50% - 10px);
+`
+
+const GoogleMapRedirectContainer = styled.a`
+    display: flex;
+    align-items: center;
+
+    margin-top: 15px;
+
+    font-size: 1.3vw;
+    font-weight: 500;
+    letter-spacing: -.1px;
+    text-decoration: none;
+
+    color: #808080;
+
+    cursor: pointer;
+
+    b {
+        color: var(--color-primary);
+        font-weight: 600;
+    }
+
+    svg {
+        height: 24px;
+        width: 24px;
+
+        color: var(--color-blue);
+
+        transform: rotate(45deg);
     }
 `
