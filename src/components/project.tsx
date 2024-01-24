@@ -146,10 +146,10 @@ const Title = styled.span`
 `
 
 const ContentContainer = styled.div`
-    width: calc(100% - 80px);
-    height: calc(60vh - 40px);
+    width: calc(100% - 100px);
+    height: calc(60vh - 80px);
 
-    padding: 20px 40px;
+    padding: 40px 50px;
 
     display: flex;
     flex-direction: column;
