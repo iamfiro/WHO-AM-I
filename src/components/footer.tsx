@@ -1,7 +1,4 @@
 import styled from 'styled-components';
-import gsap from 'gsap';
-import Background from '../images/background/footer.jpg';
-import MainBackground from '../images/background/footer_main.jpg';
 
 export default function Footer() {
     const date = new Date();
