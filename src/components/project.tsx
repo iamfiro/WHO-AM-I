@@ -135,7 +135,7 @@ const Container = styled.div`
     width: 100%;
     min-height: 100vh;
 
-    border-top: 5px solid var(--color-primary);
+    /* border-top: 5px solid var(--color-primary); */
 
     display: flex;
     flex-direction: column;
