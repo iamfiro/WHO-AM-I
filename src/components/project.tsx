@@ -105,8 +105,8 @@ export default function Stack2() {
             ease: 'linear',
             stagger: 0.1,
             duration: 0.5,
-            fontSize: '3vw',
-            letterSpacing: '-2px',
+            fontSize: '4vw',
+            letterSpacing: '-4px',
             marginBottom: '20px',
         })
     })
@@ -165,7 +165,7 @@ const Title = styled.span`
 
     height: 250px;
 
-    font-size: 15vw;
+    font-size: 13vw;
     font-weight: bold;
     letter-spacing: -1vw;
 
