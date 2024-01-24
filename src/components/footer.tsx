@@ -13,8 +13,10 @@ export default function Footer() {
                 </TopContainer>
                 <Title>Visual Developer.</Title>
                 <BottomContainer>
-                    <span>FIRO</span>
-                    <span>FIRO</span>
+                    <span>UI DESIGN</span>
+                    <span>UX RESEARCH</span>
+                    <span>FRONTEND</span>
+                    <span>BACKEND</span>
                     <a href='https://legacy.firos.dev'>Go to Legacy UI</a>
                 </BottomContainer>
             </Container>
@@ -58,4 +60,8 @@ const BottomContainer = styled.div`
 
     padding-top: 20px;
     margin-top: 50px;
+
+    a {
+        color: var(--color-primary)
+    }
 `
