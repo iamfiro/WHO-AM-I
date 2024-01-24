@@ -117,7 +117,7 @@ export default function Stack2() {
                 <TopContainer>
                     <Title className='projectTitle'>PROJECT</Title>
                     <div>
-                        <Description>The project<br/>I've been developing and working on</Description>
+                        <Description>The project I've been <br/>developing <br/>and working on</Description>
                         <img src={Arrow} />
                         <img src={Square} />
                     </div>
@@ -163,7 +163,7 @@ const TopContainer = styled.div`
 const Title = styled.span`
     color: var(--color-primary);
 
-    height: 300px;
+    height: 250px;
 
     font-size: 15vw;
     font-weight: bold;
