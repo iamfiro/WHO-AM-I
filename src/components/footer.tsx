@@ -47,6 +47,8 @@ const TopContainer = styled.div`
 
 const Title = styled.span`
     font-size: 8vw;
+
+    margin-top: 10px;
 `
 
 const BottomContainer = styled.div`
@@ -58,7 +60,7 @@ const BottomContainer = styled.div`
 
     border-top: 2px solid var(--color-primary);
 
-    padding-top: 20px;
+    padding: 20px 0px;
     margin-top: 50px;
 
     a {
