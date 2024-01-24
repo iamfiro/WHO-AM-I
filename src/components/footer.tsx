@@ -4,11 +4,12 @@ import Background from '../images/background/footer.jpg';
 import MainBackground from '../images/background/footer_main.jpg';
 
 export default function Footer() {
+    const date = new Date();
     return (
         <>
             <Container>
                 <TopContainer>
-                    <span>© 2018-2024 FIRO. All right reserved.</span>
+                    <span>© 2018-{date.getFullYear()} FIRO. All right reserved.</span>
                     <span>Made by FIRO</span>
                 </TopContainer>
                 <Title>Visual Developer.</Title>
