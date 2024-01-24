@@ -21,7 +21,7 @@ export default function Description() {
                     start: 'top 95%',
                     end: '+=70%',
                     scrub: true,
-                    markers: true,
+                    markers: false,
                 },
                 duration: 0.1,
                 opacity: 0.2,

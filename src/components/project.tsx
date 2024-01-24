@@ -50,7 +50,7 @@ function Project({ index, name }: Props) {
                 start: `top 60%`,
                 end: `+=50%`,
                 scrub: true,
-                markers: true,
+                markers: false,
             },
             ease: 'linear',
             stagger: 0.1,
