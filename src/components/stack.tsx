@@ -16,7 +16,7 @@ export default function Stack() {
                 start: `top 80%`,
                 end: `+=120%`,
                 scrub: true,
-                markers: true,
+                markers: false,
             },
             ease: 'linear',
             stagger: 0.1,
