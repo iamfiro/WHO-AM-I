@@ -12,7 +12,7 @@ function App() {
             <TopText />
             <Description />
             <Stack2 />
-            <div style={{ height: '200vh' }}/>
+            <div style={{ height: '100vh' }}></div>
         </>
     );
 }

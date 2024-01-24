@@ -18,10 +18,10 @@ export default function Description() {
             gsap.from(text.chars, {
                 scrollTrigger: {
                     trigger: el,
-                    start: 'top 80%',
-                    end: 'top 65%',
+                    start: 'top 95%',
+                    end: '+=70%',
                     scrub: true,
-                    markers: false,
+                    markers: true,
                 },
                 duration: 0.1,
                 opacity: 0.2,
@@ -167,12 +167,17 @@ const GoogleMapRedirectContainer = styled.a`
     display: flex;
     align-items: center;
 
+    width: fit-content;
+
     margin-top: 15px;
+    padding-bottom: 3px;
 
     font-size: 1.3vw;
     font-weight: 500;
     letter-spacing: -.1px;
     text-decoration: none;
+
+    border-bottom: 2px solid var(--color-blue);
 
     color: #808080;
 
