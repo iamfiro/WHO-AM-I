@@ -4,6 +4,8 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { IoMdArrowUp } from "react-icons/io";
 import DummyBackground from '../images/background/lofi.webp'
+import Square from '../svg/square.svg';
+import Arrow from '../svg/arrow.svg';
 
 interface Props {
     index: number;
@@ -92,9 +94,9 @@ export default function Stack2() {
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger)
 
-        gsap.to(".stackTitle", {
+        gsap.to(".projectTitle", {
             scrollTrigger: {
-                trigger: ".stackTitle",
+                trigger: ".projectTitle",
                 start: `top 60%`,
                 end: `+=50%`,
                 scrub: true,
@@ -111,8 +113,15 @@ export default function Stack2() {
 
     return (
         <>
-            <Container className='stackContainer'>
-                <Title className='stackTitle'>PROJEC<span>T</span></Title>
+            <Container className='projectContainer'>
+                <TopContainer>
+                    <Title className='projectTitle'>PROJECT</Title>
+                    <div>
+                        <Description>The project<br/>I've been developing and working on</Description>
+                        <img src={Arrow} />
+                        <img src={Square} />
+                    </div>
+                </TopContainer>
                 <Project index={1} name="Lofi Station" />
                 <Project index={2} name="Lofi Station" />
                 <Project index={3} name="Lofi Station" />
@@ -126,8 +135,29 @@ const Container = styled.div`
     width: 100%;
     min-height: 100vh;
 
+    border-top: 5px solid var(--color-primary);
+
     display: flex;
     flex-direction: column;
+`
+
+const TopContainer = styled.div`
+    width: 100%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    div {
+        display: flex;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+
+        margin: 0px 40px 40px 0px;
+    }
 `
 
 const Title = styled.span`
@@ -143,6 +173,10 @@ const Title = styled.span`
     align-items: flex-end;
 
     margin-left: 40px;
+`
+
+const Description = styled.span`
+    margin: 0px 40px 60px 0px;
 `
 
 const ContentContainer = styled.div`
