@@ -168,7 +168,7 @@ const StackTitle = styled.div`
 const StackList = styled.div`
     width: calc(100% - 60px);
 
-    display: none;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
