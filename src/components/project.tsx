@@ -90,7 +90,7 @@ function Project({ index, name }: Props) {
     )
 }
 
-export default function Stack2() {
+export default function Projects() {
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger)
 
