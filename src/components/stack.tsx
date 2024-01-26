@@ -20,7 +20,7 @@ interface IStack {
 
 function MyStack({ idx, title, icon, style, jsonData }: IStack) {
     return (
-        <StackContainer id={`stack_list_0${idx}_p`} style={style} data-open='false' onClick={() => {
+        <StackContainer id={`stack_list_0${idx}_p`} style={style} data-open='true' onClick={() => {
             const el = document.getElementById(`stack_list_0${idx}`);
             const el_parent = document.getElementById(`stack_list_0${idx}_p`);
     

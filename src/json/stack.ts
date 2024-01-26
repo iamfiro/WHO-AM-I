@@ -21,6 +21,7 @@ import C from '../svg/lang/c-color.svg'
 import java from '../svg/lang/java.svg'
 import git from '../svg/lang/git-color.svg'
 import lua from '../svg/lang/lua-color.svg'
+import ubuntu from '../svg/lang/UbuntuCoF.svg'
 
 export const StackData: { frontend: StackType[], backend: StackType[], design: StackType[], else: StackType[] } = {
     frontend: [
@@ -144,6 +145,11 @@ export const StackData: { frontend: StackType[], backend: StackType[], design: S
             name: 'Lua',
             url: 'https://nextjs.org/',
             image: lua
+        },
+        {
+            name: 'ubuntu',
+            url: 'https://nextjs.org/',
+            image: ubuntu
         },
     ]
 }
