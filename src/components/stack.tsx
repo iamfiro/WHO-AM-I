@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
 import Stack_1 from '../images/background/stack_1.jpg';
 import Stack_2 from '../images/background/stack_2.jpg';
 import Stack_3 from '../images/background/stack_3.jpg';
@@ -9,6 +7,7 @@ import { CgServer } from "react-icons/cg";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { StackData } from '../json/stack';
 import { StackType } from '../json/stack';
+import { MdCalendarViewWeek } from "react-icons/md";
 
 interface IStack {
     idx: number;
@@ -67,7 +66,7 @@ export default function Stack() {
                 <MyStack idx={1} title='FRONTEND' icon={<MdOutlineWebAsset />} jsonData={StackData.frontend} style={{ marginTop: '80px', borderTop: '1px solid var(--color-border)' }} />
                 <MyStack idx={2} title='BACKEND' icon={<CgServer />} jsonData={StackData.backend} />
                 <MyStack idx={3} title='DESIGN' icon={<MdOutlineDesignServices />} jsonData={StackData.design} />
-                <MyStack idx={4} title='ELSE' icon={<MdOutlineDesignServices />} jsonData={StackData.else} />
+                <MyStack idx={4} title='ELSE' icon={<MdCalendarViewWeek />} jsonData={StackData.else} />
             </Container>
         </>
     );
