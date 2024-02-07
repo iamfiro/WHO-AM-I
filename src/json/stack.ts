@@ -23,6 +23,7 @@ import git from '../svg/lang/git-color.svg'
 import lua from '../svg/lang/lua-color.svg'
 import ubuntu from '../svg/lang/UbuntuCoF.svg'
 import postman from '../svg/lang/postman-color.svg'
+import minecraft from '../svg/lang/minecraft.png'
 
 export const StackData: { frontend: StackType[], backend: StackType[], design: StackType[], else: StackType[] } = {
     frontend: [
@@ -156,6 +157,11 @@ export const StackData: { frontend: StackType[], backend: StackType[], design: S
             name: 'Postman',
             url: 'https://nextjs.org/',
             image: postman
+        },
+        {
+            name: 'Paper',
+            url: 'https://nextjs.org/',
+            image: minecraft
         },
     ]
 }
