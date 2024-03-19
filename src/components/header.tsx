@@ -55,7 +55,7 @@ const HeaderContainer = styled.header`
 `
 
 const MenuContainer = styled.div`
-    width: 280px;
+    width: 300px;
     height: auto;
 
     display: flex;
