@@ -26,7 +26,7 @@ export default function Header() {
                         <span>DESIGNER MODE</span>
                     </MenuItem>
                     <MenuItem active="false">
-                        <span>PROJECT</span>
+                        <span>DEVELOPER MODE</span>
                     </MenuItem>
                 </MenuContainer>
                     <img src={FiroIcon} height={25} />
@@ -55,7 +55,7 @@ const HeaderContainer = styled.header`
 `
 
 const MenuContainer = styled.div`
-    width: 230px;
+    width: 280px;
     height: auto;
 
     display: flex;
