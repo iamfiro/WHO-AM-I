@@ -23,7 +23,7 @@ export default function Header() {
             <HeaderContainer>
                 <MenuContainer>
                     <MenuItem active="true">
-                        <span>WEBSITE</span>
+                        <span>DESIGNER MODE</span>
                     </MenuItem>
                     <MenuItem active="false">
                         <span>PROJECT</span>
